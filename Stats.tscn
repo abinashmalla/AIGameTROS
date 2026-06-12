@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://common/CHILLER.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 43
+font_data = ExtResource( 1 )
+
+[sub_resource type="ImageTexture" id=2]
+size = Vector2( 120, 120 )
+
+[node name="Stats" type="RichTextLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 200.0
+margin_right = -544.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]
+a
+b
+c
+d
+[center]
+"
+text = "
+a
+b
+c
+d
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 272, -80 )
+texture = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}

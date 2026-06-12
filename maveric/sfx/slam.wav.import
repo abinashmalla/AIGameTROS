@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/slam.wav-5d140a23d4cb606fe9ff71d913df8096.sample"
+
+[deps]
+
+source_file="res://maveric/sfx/slam.wav"
+dest_files=[ "res://.import/slam.wav-5d140a23d4cb606fe9ff71d913df8096.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sanosukeweaponproj_bak.wav-a3c0e2c8e7db3bba447addcca69b6506.sample"
+
+[deps]
+
+source_file="res://sanosuke/sfx/sanosukeweaponproj_bak.wav"
+dest_files=[ "res://.import/sanosukeweaponproj_bak.wav-a3c0e2c8e7db3bba447addcca69b6506.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

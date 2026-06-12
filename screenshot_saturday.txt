@@ -1,0 +1,12 @@
+Disclaimer: The art assets are not by me. I have a little bit of art and programming skills but I'm not an expert in either.
+
+I am a college student from Nepal aspiring to be a game dev. I had to make a project for my current sem and I decided I would make a small game. I made a game where both characters are computer-controlled and fight each other. Some bugs to fix, but mostly happy. By the way, this is not my first attempt at making a game. Here's a video. Enjoy!
+
+Credits:
+Matt and YinYin for the character Maveric
+Dj Apx for the character Sanosuke
+DJTheFishhead for Trainer Red's Theme
+Little Fighter 2 devs Marti Wong and Starsky Wong for the Stage,some Character Sounds and Inspiration
+Godot Game Engine
+
+#screenshotsaturday

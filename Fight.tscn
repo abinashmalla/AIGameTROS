@@ -1,0 +1,130 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Sanosuke_AP.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Maveric_AP.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GlobalBB.gd" type="Script" id=3]
+[ext_resource path="res://stage/Stage.tscn" type="PackedScene" id=4]
+[ext_resource path="res://common/Status_Bar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://common/CHILLER.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Fight_Text.gd" type="Script" id=7]
+[ext_resource path="res://Fight.gd" type="Script" id=8]
+[ext_resource path="res://stage/background_music.wav" type="AudioStream" id=9]
+[ext_resource path="res://common/countdown.wav" type="AudioStream" id=10]
+[ext_resource path="res://Pause_Text.gd" type="Script" id=11]
+[ext_resource path="res://common/Stats.tscn" type="PackedScene" id=12]
+[ext_resource path="res://common/stats_bg.png" type="Texture" id=13]
+
+[sub_resource type="DynamicFont" id=1]
+size = 134
+outline_size = 7
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[node name="Fight" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 8 )
+
+[node name="Stage" parent="." instance=ExtResource( 4 )]
+position = Vector2( 544, 285 )
+
+[node name="Status_Bar" type="Node2D" parent="."]
+
+[node name="Status_Bar_P1" parent="Status_Bar" instance=ExtResource( 5 )]
+
+[node name="Status_Bar_P2" parent="Status_Bar" instance=ExtResource( 5 )]
+invert = true
+
+[node name="Stats" type="Sprite" parent="."]
+visible = false
+z_index = 2
+texture = ExtResource( 13 )
+centered = false
+
+[node name="Stats_P1" parent="Stats" instance=ExtResource( 12 )]
+
+[node name="Stats_P2" parent="Stats" instance=ExtResource( 12 )]
+position = Vector2( 544, 0 )
+
+[node name="GlobalBB" type="YSort" parent="."]
+pause_mode = 1
+script = ExtResource( 3 )
+
+[node name="Maveric" parent="GlobalBB" instance=ExtResource( 2 )]
+process_priority = 1
+
+[node name="Sanosuke" parent="GlobalBB" instance=ExtResource( 1 )]
+process_priority = 1
+
+[node name="Fight_Text" type="RichTextLabel" parent="."]
+pause_mode = 1
+margin_top = 117.0
+margin_right = 1088.0
+margin_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Battle[/center]"
+text = "Battle"
+scroll_active = false
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fight_Sounds" type="AudioStreamPlayer" parent="Fight_Text"]
+volume_db = -10.0
+
+[node name="Fight_Timer" type="RichTextLabel" parent="Fight_Text"]
+margin_top = -117.0
+margin_right = 1088.0
+margin_bottom = -75.0
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]00:00[/center]
+"
+text = "00:00
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause_Text" type="RichTextLabel" parent="."]
+margin_top = 117.0
+margin_right = 1088.0
+margin_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+scroll_active = false
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause_Sound" type="AudioStreamPlayer" parent="Pause_Text"]
+stream = ExtResource( 10 )
+volume_db = -10.0
+
+[node name="Background Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -15.0
+autoplay = true
+
+[node name="Rematch_Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[connection signal="match_end" from="Pause_Text" to="." method="_on_Pause_Text_match_end"]
+[connection signal="timeout" from="Rematch_Timer" to="." method="_on_Rematch_Timer_timeout"]

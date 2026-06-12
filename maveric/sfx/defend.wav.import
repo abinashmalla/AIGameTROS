@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/defend.wav-e5551e1043d2d08e0c60761a7bcfc71a.sample"
+
+[deps]
+
+source_file="res://maveric/sfx/defend.wav"
+dest_files=[ "res://.import/defend.wav-e5551e1043d2d08e0c60761a7bcfc71a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

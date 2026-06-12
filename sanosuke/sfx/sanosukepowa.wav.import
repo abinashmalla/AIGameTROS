@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sanosukepowa.wav-07daad0d854ddcd6a5e1762b740f826d.sample"
+
+[deps]
+
+source_file="res://sanosuke/sfx/sanosukepowa.wav"
+dest_files=[ "res://.import/sanosukepowa.wav-07daad0d854ddcd6a5e1762b740f826d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

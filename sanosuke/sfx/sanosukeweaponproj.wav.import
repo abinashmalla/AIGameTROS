@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sanosukeweaponproj.wav-4023a446601349032e09257dad332494.sample"
+
+[deps]
+
+source_file="res://sanosuke/sfx/sanosukeweaponproj.wav"
+dest_files=[ "res://.import/sanosukeweaponproj.wav-4023a446601349032e09257dad332494.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
