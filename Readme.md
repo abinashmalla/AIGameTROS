@@ -15,7 +15,7 @@ In order to run this project, Godot v3.4 stable can be downloaded from here:</br
 
 The same link also contains export templates for mobile or web platforms.
 
-Project Demo: https://prabeshgiri.com.np/games/tros/ 
+ 
 
 ## Ending Thoughts
 For any future work, being able to play as the characters through a touchscreen or keyboard through the web would be the next step. The project is not well optimized for rollback netcode, and so websockets are the best option for networking.
